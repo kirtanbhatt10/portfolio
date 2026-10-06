@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" class="entering">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About · Kirtan Bhatt</title>
+<meta name="description" content="About Kirtan Bhatt: education, leadership, hackathon results and skills.">
+<meta name="theme-color" content="#07090c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<noscript><style>html.entering main{opacity:1}html.entering .curtain{display:none}.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body data-scene="about">
+<canvas id="stage" aria-hidden="true"></canvas>
+<div class="glowbg" aria-hidden="true"></div><div class="spot" aria-hidden="true"></div>
+<div class="bar" aria-hidden="true"></div>
+<div class="c-ring" aria-hidden="true"></div><div class="c-dot" aria-hidden="true"></div>
+<div class="curtain" aria-hidden="true"><pre></pre></div>
+
+<header>
+  <a class="logo" href="index.html" data-cursor="home"><i></i>KB / 2026</a>
+  <nav><a href="index.html">Home</a><a href="work.html">Work</a><a href="about.html" aria-current="page">About</a><a href="lab.html">Lab</a><a href="contact.html">Contact</a><button class="kbd" type="button" data-palette data-cursor="menu" aria-label="Open command menu">Menu ⌘K</button></nav>
+</header>
+
+<main>
+  <section class="hero short">
+    <div class="wrap"><div class="narrow">
+      <p class="tag">About</p>
+      <h1 class="sm"><span data-scramble>Builder,</span><span class="out" data-scramble>breaker.</span></h1>
+      <p class="lede">I am a Computer Engineering (Cyber Security) student at the Institute of Advanced Research, Gandhinagar, with hands-on work across web security, API security, networking, AI applications and backend engineering.</p>
+      <div class="meta">
+        <div>Degree<strong>B.Tech CE, Cyber Security</strong></div>
+        <div>Semester<strong>5th · class of 2028</strong></div>
+        <div>CGPA<strong>7.98 / 10</strong></div>
+      </div>
+    </div></div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="tag rv">01 · Leadership &amp; recognition</p>
+      <div class="tl">
+        <article class="rv"><small>Founder &amp; lead developer</small><h3>Sugam</h3><p>A spiritual-services marketplace, funded by SSIP Gujarat and in pre-production. I lead product direction, system architecture and backend development.</p></article>
+        <article class="rv"><small>National Finalist · 2025</small><h3>Smart India Hackathon</h3><p>Led the six-member Zenny AI Therapist team and owned the backend, AI fusion engine and API layer.</p></article>
+        <article class="rv"><small>2nd place · 2025</small><h3>CyberPeace × IAR Hackathon</h3><p>Podium finish in a cybersecurity-focused hackathon.</p></article>
+        <article class="rv"><small>7th of 300 teams</small><h3>LJ University Hackathon</h3><p>Roughly the top 2.3% of participating teams.</p></article>
+        <article class="rv"><small>President</small><h3>IAR STEM Club</h3><p>I lead student STEM initiatives and coordinate technical and community activities. I also volunteered at the IAR Cancer Research / LJ Hackathon.</p></article>
+      </div>
+    </div>
+  </section>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="tag rv">02 · Toolkit</p>
+      <h2 class="rv">What I work with.</h2>
+      <dl class="skills">
+        <div class="row rv"><dt>Security</dt><dd><span class="chip">Web security</span><span class="chip">API security</span><span class="chip">Networking</span><span class="chip">Secure coding</span><span class="chip">Security reviews</span></dd></div>
+        <div class="row rv"><dt>Languages</dt><dd><span class="chip">Python<i>strong</i></span><span class="chip">JavaScript / TypeScript<i>strong</i></span><span class="chip">Java<i>intermediate</i></span><span class="chip">C / C++<i>intermediate</i></span></dd></div>
+        <div class="row rv"><dt>Development</dt><dd><span class="chip">React<i>intermediate</i></span><span class="chip">Node.js<i>intermediate</i></span><span class="chip">REST APIs</span><span class="chip">AI / LLM integration</span></dd></div>
+        <div class="row rv"><dt>Cloud &amp; tools</dt><dd><span class="chip">AWS<i>intermediate</i></span><span class="chip">DynamoDB<i>intermediate</i></span><span class="chip">Git / GitHub</span><span class="chip">Linux</span></dd></div>
+      </dl>
+      <div class="cta rv" style="margin-top:36px"><a class="btn pri mag" href="work.html" data-cursor="go">See the work →</a><a class="btn mag" href="contact.html" data-cursor="mail">Get in touch</a></div>
+    </div>
+  </section>
+</main>
+<footer><span>Gandhinagar, Gujarat, India</span><span><a href="https://github.com/kirtanbhatt10" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/kirtan-bhatt-974422322" target="_blank" rel="noopener">LinkedIn</a> · Press / for the command menu</span></footer>
+
+<div class="pal" role="dialog" aria-label="Command menu"><div class="pal-box"><input type="text" placeholder="Jump to a page, project or action…" aria-label="Search commands"><ul role="listbox"></ul></div></div>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="site.js"></script>
+<script type="module" src="scene.js"></script>
+</body>
+</html>
