@@ -136,7 +136,7 @@ footer{padding:26px clamp(16px,4vw,48px);border-top:1px solid var(--line);displa
 
 @media (max-width:860px){
   nav a:not(.keep){display:none}
-  .hero{align-items:flex-end;padding-bottom:70px}
+  .hero{align-items:flex-end;padding-top:40vh;padding-bottom:70px}
   .hero-copy{max-width:100%}
   .facts{grid-template-columns:repeat(2,auto)}
   .hint{display:none}
@@ -424,7 +424,7 @@ scene.add(stars);
 // --- layout: where the bot stands for each scroll stage (fractions of half-viewport) ---
 let halfW = 1, halfH = 1, narrow = false;
 const stagesWide = [{ x: .52, y: .02, s: 1.05 }, { x: .64, y: -.02, s: .82 }, { x: .7, y: -.3, s: .6 }, { x: .72, y: -.25, s: .62 }, { x: .58, y: 0, s: .9 }];
-const stagesNarrow = [{ x: 0, y: .46, s: .62 }, { x: .62, y: .62, s: .3 }, { x: .62, y: .62, s: .3 }, { x: .62, y: .62, s: .3 }, { x: .5, y: .6, s: .36 }];
+const stagesNarrow = [{ x: .3, y: .56, s: .5 }, { x: .62, y: .62, s: .3 }, { x: .62, y: .62, s: .3 }, { x: .62, y: .62, s: .3 }, { x: .5, y: .6, s: .36 }];
 function resize() {
   const w = innerWidth, h = innerHeight; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
   halfH = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * camera.position.z; halfW = halfH * camera.aspect; narrow = w < 860;
