@@ -71,7 +71,7 @@ const propMat = new THREE.MeshStandardMaterial({ color: accent(), roughness: .25
 const propWire = new THREE.LineBasicMaterial({ color: accent(), transparent: true, opacity: .55 });
 const crystals = [];
 if (SCENE === 'work') {
-  ['#b6ff3c', '#3cf0ff', '#ffb03c', '#ff5c8a', '#a78bfa'].forEach((c, i) => {
+  ['#b6ff3c', '#3cf0ff', '#ffb03c', '#ff5c8a', '#a78bfa', '#e8ecf1'].forEach((c, i) => {
     const m = M(new THREE.OctahedronGeometry(.26, 0), new THREE.MeshStandardMaterial({ color: c, roughness: .2, metalness: .6, emissive: new THREE.Color(c), emissiveIntensity: .35, flatShading: true }));
     m.userData.i = i; crystals.push(m); prop.add(m);
   });

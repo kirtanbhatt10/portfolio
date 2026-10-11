@@ -141,7 +141,7 @@
   /* ---------- command palette ---------- */
   const PAGES = [
     ['Home', 'index.html', 'page'], ['Work', 'work.html', 'page'], ['About', 'about.html', 'page'], ['Lab', 'lab.html', 'page'], ['Contact', 'contact.html', 'page'],
-    ['Sentinel AI', 'sentinel.html', 'project'], ['Zenny AI Therapist', 'zenny.html', 'project'], ['Sugam', 'sugam.html', 'project'], ['Solaris', 'solaris.html', 'project'], ['AI Code Security Platform', 'codesec.html', 'project'],
+    ['Sentinel AI', 'sentinel.html', 'project'], ['Zenny AI Therapist', 'zenny.html', 'project'], ['Sugam', 'sugam.html', 'project'], ['Solaris', 'solaris.html', 'project'], ['AI Code Security Platform', 'codesec.html', 'project'], ['Undertone', 'undertone.html', 'project'],
   ];
   const ACTIONS = [
     ...PAGES.map(([n, h, k]) => ({ n, k, run: () => go(h) })),

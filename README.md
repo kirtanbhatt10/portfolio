@@ -6,7 +6,7 @@
 
 ## What is on it
 
-- **Work:** a page each for Sentinel AI, Zenny AI Therapist, Sugam, Solaris and the AI Code Security Platform.
+- **Work:** a page each for Sentinel AI, Zenny AI Therapist, Sugam, Solaris, the AI Code Security Platform and Undertone.
 - **Lab:** a working terminal, a live SHA-256 hasher and a password entropy meter.
 - **About and contact:** education, leadership, recognition and how to reach me.
 - **Command menu:** press `/` or `Ctrl`/`⌘` + `K` to jump anywhere from the keyboard.
