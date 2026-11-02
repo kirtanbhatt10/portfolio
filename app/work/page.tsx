@@ -1,25 +1,28 @@
 import type { Metadata } from 'next';
 
-import CaseTable from '@/components/CaseTable';
+import Capture from '@/components/Capture';
 import { projects } from '@/lib/projects';
 
 export const metadata: Metadata = {
-  title: 'Case files',
-  description: 'Security tools, AI products, a desktop app and a startup, each with its own case file.',
+  title: 'Packet capture',
+  description: 'Security tools, AI products, a desktop app and a startup, captured as packets you can filter and inspect.',
 };
 
 export default function Work() {
   return (
     <div className="wrap">
       <header className="page-head">
-        <h1 className="page-title">Case files</h1>
+        <p className="eyebrow-cmd" aria-hidden="true">
+          $ tcpdump -r projects.pcap
+        </p>
+        <h1 className="page-title">Packet capture</h1>
         <p className="lede">
-          {projects.length} projects, newest first. Open a file for how it fits together, what I did and, for the security tools,
-          a version you can run in this page.
+          {projects.length} projects, newest first. Filter with a Wireshark display filter, select a packet to read its fields, and
+          double-click or press Enter to open its case file.
         </p>
       </header>
-      <section style={{ paddingBottom: 'clamp(3rem, 8vw, 6rem)' }} aria-label="All case files">
-        <CaseTable />
+      <section className="page-body" aria-label="All projects">
+        <Capture />
       </section>
     </div>
   );
