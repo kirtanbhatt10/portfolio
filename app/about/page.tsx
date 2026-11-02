@@ -1,12 +1,30 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-import { education, recognition, toolkit } from '@/lib/site';
+import { education, person, recognition, toolkit } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Education, leadership, recognition and the toolkit.',
+  description: 'Education, leadership, recognition and the toolkit, as a whois record.',
 };
+
+const value = (label: string) => education.find((e) => e.label === label)?.value ?? '';
+
+const WHOIS: [string, React.ReactNode][] = [
+  ['Registrant Name', person.name],
+  ['Registrant Location', person.location],
+  ['Registrar', value('Institute')],
+  ['Program', value('Degree')],
+  ['Term', value('Semester')],
+  ['CGPA', value('CGPA')],
+  ['Domain Status', 'open to internships in security, backend and AI'],
+  [
+    'Name Server',
+    <a key="gh" href={person.github} target="_blank" rel="noopener">
+      {person.github.replace('https://', '')}
+    </a>,
+  ],
+];
 
 export default function About() {
   return (
@@ -19,27 +37,32 @@ export default function About() {
         </p>
       </header>
 
-      <dl className="factsheet" aria-label="Education">
-        {education.map((e) => (
-          <div key={e.label}>
-            <dt>{e.label}</dt>
-            <dd>{e.value}</dd>
-          </div>
-        ))}
-      </dl>
+      <figure className="whois">
+        <figcaption className="trace-cmd">
+          <span aria-hidden="true">$ </span>whois kirtan.bhatt
+        </figcaption>
+        <dl>
+          {WHOIS.map(([k, v]) => (
+            <div key={k}>
+              <dt>{k}:</dt>
+              <dd>{v}</dd>
+            </div>
+          ))}
+        </dl>
+      </figure>
 
       <section className="section" aria-labelledby="record">
         <div className="section-head">
-          <h2 id="record">Leadership and recognition</h2>
+          <h2 id="record">On the record</h2>
         </div>
-        <ul className="record">
+        <ol className="record">
           {recognition.map((r) => (
             <li key={r.title}>
               <strong>{r.title}</strong>
-              <span className="muted">{r.detail}</span>
+              <span>{r.detail}</span>
             </li>
           ))}
-        </ul>
+        </ol>
       </section>
 
       <section className="section" aria-labelledby="toolkit">
@@ -61,12 +84,12 @@ export default function About() {
             </div>
           ))}
         </div>
-        <p style={{ marginTop: '2.5rem', display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-          <Link className="btn btn-primary" href="/work/">
-            Open the case files
+        <p className="actions">
+          <Link className="btn btn-solid" href="/work/">
+            Open the packet capture
           </Link>
-          <Link className="btn" href="/contact/">
-            Get in touch
+          <Link className="btn btn-line" href="/contact/">
+            Start a handshake
           </Link>
         </p>
       </section>
