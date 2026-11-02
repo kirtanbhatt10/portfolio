@@ -19,9 +19,9 @@ export default function Header() {
   const current = (href: string) => pathname === href || (href !== '/' && pathname.startsWith(href));
 
   return (
-    <header className="site-header">
-      <div className="wrap">
-        <Link className="wordmark" href="/" aria-label="Kirtan Bhatt, home">
+    <header className="bar">
+      <div className="wrap bar-in">
+        <Link className="mark" href="/" aria-label="Kirtan Bhatt, home">
           KB
         </Link>
         <nav className="nav" aria-label="Main">
