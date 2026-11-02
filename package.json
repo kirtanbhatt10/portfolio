@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test tests/demos.test.ts"
+    "test": "node --experimental-strip-types --test tests/demos.test.ts tests/capture.test.ts"
   },
   "dependencies": {
     "next": "^15.5.0",
