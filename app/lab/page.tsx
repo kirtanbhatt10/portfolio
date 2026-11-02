@@ -16,12 +16,12 @@ export default function Lab() {
         <h1 className="page-title">Lab</h1>
         <p className="lede">Small working things. Everything here runs in your browser; nothing you type is sent anywhere.</p>
       </header>
-      <section style={{ paddingBottom: '2rem' }} aria-label="Terminal">
+      <section className="page-body lab" aria-label="Lab tools">
         <Terminal />
-      </section>
-      <section className="lab-grid" style={{ paddingBottom: 'clamp(3rem, 8vw, 6rem)' }} aria-label="Security toys">
-        <Sha256 />
-        <Entropy />
+        <div className="lab-grid">
+          <Sha256 />
+          <Entropy />
+        </div>
       </section>
     </div>
   );
