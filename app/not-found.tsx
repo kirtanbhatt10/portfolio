@@ -1,16 +1,18 @@
 import Link from 'next/link';
 
+import PortScan from '@/components/PortScan';
+
 export default function NotFound() {
   return (
     <div className="wrap notfound">
-      <p className="file-no">Error 404</p>
-      <h1 className="page-title">File not found</h1>
-      <p className="lede">There is no case file at this address. It may have moved when the site was rebuilt.</p>
-      <p style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-        <Link className="btn btn-primary" href="/work/">
-          Open the case files
+      <h1 className="page-title">Connection refused</h1>
+      <p className="lede">Nothing is listening at this address. It may have moved when the site was rebuilt. Here is what is open.</p>
+      <PortScan />
+      <p className="actions">
+        <Link className="btn btn-solid" href="/work/">
+          Open the packet capture
         </Link>
-        <Link className="btn" href="/">
+        <Link className="btn btn-line" href="/">
           Go to the home page
         </Link>
       </p>
