@@ -7,6 +7,8 @@ export interface Project {
   file: string;
   name: string;
   kind: Kind;
+  /** Short protocol-style tag used in the packet-capture index. */
+  proto: string;
   summary: string;
   role: string;
   status: string;
@@ -33,6 +35,7 @@ export const projects: Project[] = [
     file: 'KB-09',
     name: 'PromptShield',
     kind: 'security',
+    proto: 'LLM',
     summary:
       'A zero-dependency guardrail for LLM apps: it catches prompt injection on the way in and leaked secrets, personal data and exfiltration links on the way out.',
     role: 'Solo build',
@@ -62,6 +65,7 @@ export const projects: Project[] = [
     file: 'KB-08',
     name: 'HeaderHawk',
     kind: 'security',
+    proto: 'HTTP',
     summary:
       'Audits the HTTP security headers and cookies of any site, grades it from A+ to F and gives a concrete fix for every finding.',
     role: 'Solo build',
@@ -91,6 +95,7 @@ export const projects: Project[] = [
     file: 'KB-07',
     name: 'CyberSec Arsenal',
     kind: 'security',
+    proto: 'PY',
     summary:
       'Ten hands-on security tools in readable, dependency-free Python, from a cipher breaker to a web attack detector, each with tests and a write-up of how the attack works.',
     role: 'Solo build',
@@ -116,6 +121,7 @@ export const projects: Project[] = [
     file: 'KB-06',
     name: 'Undertone',
     kind: 'ai',
+    proto: 'IPC',
     summary:
       'A quiet, floating desktop AI assistant that stays beside your work and out of your screen share.',
     role: 'Solo build',
@@ -139,6 +145,7 @@ export const projects: Project[] = [
     file: 'KB-05',
     name: 'Sentinel AI',
     kind: 'security',
+    proto: 'HASH',
     summary:
       'Detects unauthorised reuse, duplication, manipulation and potential IP misuse of digital assets.',
     role: 'Security',
@@ -161,6 +168,7 @@ export const projects: Project[] = [
     file: 'KB-04',
     name: 'Zenny AI Therapist',
     kind: 'ai',
+    proto: 'AI',
     summary:
       'A platform that makes support more accessible, lowers the entry barrier and helps address the stigma around therapy.',
     role: 'Team lead',
@@ -180,6 +188,7 @@ export const projects: Project[] = [
     file: 'KB-03',
     name: 'Sugam',
     kind: 'other',
+    proto: 'AWS',
     summary:
       'A marketplace that closes the discovery gap between people seeking pandits and pandits seeking clients.',
     role: 'Founder',
@@ -199,6 +208,7 @@ export const projects: Project[] = [
     file: 'KB-02',
     name: 'Solaris',
     kind: 'other',
+    proto: 'ML',
     summary:
       'A backend API that predicts solar power generation from NASA POWER and Open-Meteo data, and finds the best panel orientation.',
     role: 'Machine learning',
@@ -218,6 +228,7 @@ export const projects: Project[] = [
     file: 'KB-01',
     name: 'AI Code Security Platform',
     kind: 'security',
+    proto: 'SAST',
     summary: 'An all-in-one AI platform concept for code-security reviews and developer-focused security analysis.',
     role: 'AppSec concept',
     status: 'Concept build',
