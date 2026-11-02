@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import HeaderHawkDemo from '@/components/demos/HeaderHawkDemo';
 import PhishDemo from '@/components/demos/PhishDemo';
 import PromptShieldDemo from '@/components/demos/PromptShieldDemo';
-import Flow from '@/components/Flow';
+import Traceroute from '@/components/Traceroute';
 import { type Demo, getProject, neighbours, projects } from '@/lib/projects';
 
 type Params = { slug: string };
@@ -38,11 +38,13 @@ export default async function CaseFile({ params }: { params: Promise<Params> }) 
   return (
     <div className="wrap">
       <p className="crumbs">
-        <Link href="/work/">Case files</Link> / {p.name}
+        <Link href="/work/">Packet capture</Link> <span aria-hidden="true">/</span> {p.file}
       </p>
 
       <header className="file-head">
-        <p className="file-no">File {p.file}</p>
+        <p className="file-no">
+          Frame {p.file}, protocol {p.proto}
+        </p>
         <h1 className="file-title">{p.name}</h1>
         <p className="file-summary">{p.summary}</p>
       </header>
@@ -83,7 +85,7 @@ export default async function CaseFile({ params }: { params: Promise<Params> }) 
               <ul className="evidence">
                 {p.evidence.map((e) => (
                   <li key={e.label}>
-                    {e.value} {e.label}
+                    <b>{e.value}</b> {e.label}
                   </li>
                 ))}
               </ul>
@@ -94,7 +96,7 @@ export default async function CaseFile({ params }: { params: Promise<Params> }) 
 
       <section className="section" aria-labelledby="flow">
         <h2 id="flow">How it fits together</h2>
-        <Flow steps={p.flow} label={`How ${p.name} works, step by step`} />
+        <Traceroute target={p.slug} file={p.file} steps={p.flow} />
       </section>
 
       {DemoView && (
@@ -125,13 +127,13 @@ export default async function CaseFile({ params }: { params: Promise<Params> }) 
         </div>
       </section>
 
-      <nav className="section pager" aria-label="More case files">
+      <nav className="section pager" aria-label="More projects">
         <Link href={`/work/${prev.slug}/`}>
-          <span>Previous file</span>
+          <span>Previous packet</span>
           <strong>{prev.name}</strong>
         </Link>
         <Link href={`/work/${next.slug}/`}>
-          <span>Next file</span>
+          <span>Next packet</span>
           <strong>{next.name}</strong>
         </Link>
       </nav>
