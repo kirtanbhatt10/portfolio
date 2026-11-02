@@ -553,7 +553,7 @@ kbd {
 
 .case-status {
   font-size: var(--s-1);
-  white-space: nowrap;
+  min-width: 7.5rem;
 }
 
 @media (max-width: 760px) {
